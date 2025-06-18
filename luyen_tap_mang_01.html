@@ -1,10 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+  <script>
+      // Bài 1 Viết chương trình khởi tạo một mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao
+      // nhiêu số nguyên lớn hơn hoặc bằng 10.
+
+    // let array = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
+    // let numbers = "";
+    // for (let i = 0; i < array.length; i++){
+    //   if (array[i] >= 10){
+    //     numbers += array[i] + " ";
+    //   }
+    // }
+    // console.log("Dãy số nguyên >= 10: " + numbers);
+
+      // Bài 2 Viết chương trình khởi tạo một mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị phần tử
+      // có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+
+    // let array = [1, 5, 90, 15, 20, 123, 986865, 35, 40, 45];
+    // let numbers_max = array[0];
+    // let index = 0;
+    // for (let i = 1; i < array.length; i++) {
+    //   if (array[i] > numbers_max) {
+    //     numbers_max = array[i];
+    //     index = i;
+    //   }
+    // }
+    // console.log("Số lớn nhất " + numbers_max + " ở vị trí " + index);
+
+      // Bài 3Viết chương trình khởi tạo một mảng số nguyên. Hiển thị giá trị lớn nhất trong mảng đó. In ra giá trị trung bình
+      // của các phần tử trong mảng.
+
+    // let array = [1, 5, 10, 15, 100, 25, 30, 35, 40, 45];
+    // let numbers_max = array[0];
+    // let ces = 0;
+    // for(let i = 0; i < array.length; i++){
+    //   if(array[i] > numbers_max){
+    //     numbers_max = array[i];
+    //   }
+    //   ces += array[i];
+    // }
+    // console.log("Giá trị trung bình các số trong dãy là: " + (ces / array.length ));
+    // console.log("Số lớn nhất là: " + numbers_max);
+
+
+      // Bài 4 Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng.
+
+    // let array = [1, 5, 3410, 1565, 223450, 25235, 305235, 35235, 40235, 42345];
+    // console.log(array.sort((a,b)=>a-b));
+    // console.log(array.sort((a,b)=>b-a));
+
+      // Bài 5 Viết chương trình đếm số nguyên âm trong một chuỗi.
+
+    // let array = [1, 5, -10, -15, 20, 25, -30, -35, -40, 45];
+    // let count = 0;
+    // for(let i = 0; i < array.length; i++) {
+    //   if(array[i] < 0){
+    //     count++;
+    //   }
+    // }
+    // console.log("Số nguyên âm trong chuỗi là: " + count);
+
+    // Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên gồm 10 phần tử. Nhập hoặc tạo một phần tử
+      // số nguyên V. Chương trình tìm xem V có nằm trong mảng không.
+      // Nếu V thuộc mảng, in ra: "V is in the array".
+      //     Nếu không, in ra: "V is not in the array".
+
+    // function check_number_inarray() {
+    //     let array = [1, 5, -10, -15, -20, 25, -30, -35, -40, 45];
+    //     let v = +prompt("Nhập vào 1 số nguyên: ");
+    //     let check = false;
+    //     for (let i = 0; i < array.length; i++) {
+    //         if (array[i] === v) {
+    //             alert(v + " is in the array");
+    //             check=true
+    //         }
+    //     }
+    //     if (check == false) {
+    //         alert(v + " is not in the array");
+    //     }
+    // }
+    // check_number_inarray();
+
+      // Bài 7
+      // Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên gồm 10 phần tử. Nhập hoặc tạo một phần tử số nguyên
+      // V. Chương trình kiểm tra xem V có thuộc mảng đã cho không.
+      //
+      //     Nếu V thuộc mảng, xóa V khỏi mảng (dịch các phần tử bên phải V sang vị trí của V và gán 0 cho phần tử
+      // cuối cùng của mảng).
+
+      // function check_number_inarray(){
+      //     let array = [1, 5, -10, -15, -20, 25, -30, -35, -40, 45];
+      //     let v = +prompt("Nhập vào số nguyên: ");
+      //     let check = false;
+      //     for(let i = 0; i < array.length; i++) {
+      //         if(array[i] === v){
+      //             alert(v + " is in the array");
+      //             check = true;
+      //             array.splice(i, 1); // xoa phan tu i khoi mang
+      //             array.push(0); // them phan tu 0 vao cuoi mang
+      //             alert(array);
+      //         }
+      //     }
+      //     if(check == false) {
+      //         alert(v + " is not in the array");
+      //     }
+      // }
+      // check_number_inarray();
+
+      //Bài 8 Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ
+      // tự giảm dần và hiển thị mảng đã được sắp xếp.
+
+      // let array = [1, 5, -10, -15, -20, 25, -30, -35, -40, 45];
+      // document.write(array.sort((a, b) => a - b));
+
+      // Bài 9 Viết chương trình khởi tạo hoặc nhập vào hai mảng số nguyên gồm 10 phần tử (gọi là mảng a và b).
+      // Tạo mảng c gồm 20 phần tử.
+      //     Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c.
+      //     Hiển thị mảng c.
+
+      let a = [1, 5, -10, -15, -20, 25, -30, -35, -40, 45];
+      let b = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
+      let c = a.concat(b);
+      console.log(c);
+
+
+
+    
+  </script>
+
+
 </body>
 </html>
