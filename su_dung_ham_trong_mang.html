@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    // Bài 1: Nối các phần tử trong mảng thành chuỗi
+    // let myColor = ["Red", "Green", "White", "Black"];
+    // document.write(["Red", "Green", "White", "Black"].join(","));
+
+    // Bài 2: Chèn dấu "-" giữa các số chẵn
+    // lap ham chen dau tru giua so chan
+    // function chen_dau_tru_giua_so_chan(chuoi) {
+    //     let ketqua = "";
+    //     for (let i = 0; i < chuoi.length - 1; i++) {
+    //         ketqua += chuoi[i];
+    //         if (chuoi[i] % 2 === 0 && chuoi[i + 1] % 2 === 0) {
+    //             ketqua += "-";
+    //         }
+    //     }
+    //     ketqua += chuoi[chuoi.length - 1]; // them so cuoi cung
+    //     return ketqua;
+    // }
+    // // nhap so tu nguoi dung
+    // let a = prompt("Nhập chuỗi số: ");
+    // let ketqua = chen_dau_tru_giua_so_chan(a);
+    // console.log(ketqua);
+
+    // Bài 3: Chuyển đổi chữ thường sang chữ hoa và ngược lại
+
+    // lap ham doi chu in hoa
+    function doi_kieu_chu(chuoi) {
+        let ketqua = "";
+        for (let i = 0; i < chuoi.length; i++){
+            let kitu = chuoi[i];
+            if (kitu === kitu.toLowerCase()){
+                ketqua += kitu.toUpperCase();
+            } else {
+                ketqua += kitu.toLowerCase();
+            }
+        }
+        return ketqua;
+    }
+    // vi du
+    let array = 'The Quick Brown Fox';
+    let chuoi_dao = doi_kieu_chu(array);
+    console.log(chuoi_dao);
+
+  </script>
+</body>
+</html>
