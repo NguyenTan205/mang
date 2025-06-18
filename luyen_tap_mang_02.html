@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Bài 1: Viết chương trình khởi tạo mảng 2 chiều với một bộ phần tử có sẵn, sau đó in ra các phần tử trong mảng.
+
+        // let a = [
+        //     [1, 2, 1, 24],
+        //     [8, 11, 9, 4],
+        //     [7, 0, 7, 27],
+        //     [7, 4, 28, 14],
+        //     [3, 10, 26, 7]
+        // ];
+        // for(let i = 0; i < a.length; i++) {
+        //     document.write("<br>row" + i )
+        //     for (let j = 0; j < a[i].length; j++) {
+        //         document.write( "<br>"+a[i][j] + "");
+        //     }
+        // }
+
+        // Bài 2:Viết chương trình in các ký tự trong một mảng theo thứ tự đảo ngược.
+        //     Ví dụ:
+        //     Với mảng [ 'c', 's', 'c', '2', '6', '1' ], sau khi đảo ngược sẽ là: "162csc".
+
+        // let array = [ 'c', 's', 'c', '2', '6', '1' ];
+        // console.log(array.reverse());
+
+        // Bài 3:Viết chương trình khai báo một mảng ký tự và kích thước của mảng.
+        //     Yêu cầu: Đếm số ký tự số (0-9) trong mảng.
+
+        // let array = [ 'c', 's', 'c', '2', '6', '1', '3', '4', '5', '6', 'a', '8', 'c' ];
+        // let numbers = '0, 1, 2, 3, 4, 5, 6, 7, 8, 9';
+        // let count = 0;
+        // for (let i = 0; i < array.length; i++) {
+        //     if (numbers.includes(array[i],0) ) {
+        //         count++;
+        //     }
+        // }
+        // console.log(count);
+
+        // Bài 4: Viết chương trình đếm số từ trong một chuỗi.
+
+        // let text = prompt('Nhập 1 chuỗi nào !!!');
+        // let words = text.trim().split(/\s+/); //trim() loại bỏ khoảng trắng đầu/cuối chuỗi.
+        //                                       //split(/\s+/) tách chuỗi thành mảng các từ dựa trên khoảng trắng (một hoặc nhiều khoảng trắng).
+        //
+        // console.log(words.length);
+
+        // Bài 5: Viết chương trình nhập vào 2 chuỗi, kiểm tra xem hai chuỗi có giống nhau không.
+
+        let str_a = prompt("Nhập vào chuỗi a: ");
+        let str_b = prompt("Nhập vào chuỗi b: ");
+        if(str_a === str_b){
+            alert("2 chuỗi vừa nhập vào giống nhau!")
+        } else {
+            alert("2 chuỗi vừa nhập khác nhau!")
+        }
+
+       // Bài 6:Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự '-' trong mảng
+        // và thay thế chúng bằng ký tự '_'.
+
+        // let array = [ '-', 's', '-', '2', '6', '1', '-', '4', '5', '-', 'a', '8', 'c' ];
+        // document.write(array + "<br>");
+        // let replaced = array.map(array => array === "-" ? "_" : array) // su dung ham map de thay the 1 phan tu
+        // document.write(replaced);
+    </script>
+
+</body>
+</html>
