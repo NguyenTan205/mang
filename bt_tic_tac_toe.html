@@ -1,10 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h3>Bàn cờ caro</h3>
+<p id="carogame"></p>
+<!--<input type="button" value="Change Value" onclick="changeValue()">-->
+<script>
+    let b = document.getElementById('carogame');
+    let boards = []
+    let data = "";
+    let h = 0;
+    const BOARD_SIZE = 10;
+    for (let i = 0; i < BOARD_SIZE; i++) {
+        boards[i] = ['(.)', '(.)', '(.)', '(.)', '(.)', '(.)', '(.)', '(.)', '(.)', '(.)'];
+    }
+    for (let i = 0; i < BOARD_SIZE; i++) {
+        data += "<br/>";
+        for (let j = 0; j < BOARD_SIZE; j++) {
+            data += boards[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+    b.innerHTML = data;
+
+    // tao ham xu li khi click chuot changevalue:
+    function changeValue() {
+        let positionX = +prompt("X: ");
+        let positionY = +prompt("Y: ");
+        if (h % 2 === 0) {
+            boards[positionX][positionY] = "x";
+        } else {
+            boards[positionX][positionY] = "o";
+        }
+        h++;
+        data = "";
+        for(let i =0; i < BOARD_SIZE; i++) {
+            data += "<br/>";
+            for (let j = 0; j < BOARD_SIZE; j++) {
+            data += boards[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+        b.innerHTML = "<hr/>" + data;
+        checkWin();
+    }
+    // dieu kien thang
+    function checkWin() {
+        for (let i = 0; i < BOARD_SIZE; i++) {
+            for (let j = 0; j < BOARD_SIZE; j++) {
+                const duongNgang_x = boards[i][j] === "x" && boards[i][j + 1] === "x" && boards[i][j + 2] === "x";
+                const duongDoc_x = boards[i][j] === "x" && boards[i + 1][j] === "x" && boards[i + 2][j] === "x";
+                const duongCheo_x = boards[i][j] === "x" && boards[i + 1][j + 1] === "x" && boards[i + 2][j + 2] === "x";
+                const duongNgang_o = boards[i][j] === "o" && boards[i][j + 1] === "o" && boards[i][j + 2] === "o";
+                const duongDoc_o = boards[i][j] === "o" && boards[i + 1][j] === "o" && boards[i + 2][j] === "o"
+                const duongCheo_o = boards[i][j] === "o" && boards[i + 1][j + 1] === "o" && boards[i + 2][j + 2] === "o";
+
+                if (duongNgang_x === true || duongDoc_x === true || duongCheo_x === true) {
+                    alert("x thắng!!!");
+                } else if (duongNgang_o === true || duongDoc_o === true || duongCheo_o === true) {
+                    alert("o thắng!!!");
+                }
+            }
+        }
+    }
+
+</script>
+
 </body>
 </html>
